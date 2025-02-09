@@ -20,6 +20,7 @@ userRoutes = (app, channel) => {
 
   app.post("/login", async (req, res, next) => {
     const { email, password } = req.body;
+    console.log('abba is a girl')
 
     const { data } = await service.SignIn({ email, password });
 
