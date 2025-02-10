@@ -13,6 +13,8 @@ class UserService {
 
   async SignIn(userInputs) {
     const { email, password } = userInputs;
+    console.log(email);
+    console.log(password);
 
     const user = await this.repository.FindUser({ email });
 
