@@ -17,6 +17,7 @@ class UserService {
     const user = await this.repository.FindUser({ email });
 
     if (user) {
+      console.log('found user');
       const validPassword = await ValidatePassword(password, user.password);
       if (validPassword) {
         const token = await GenerateSignature({
