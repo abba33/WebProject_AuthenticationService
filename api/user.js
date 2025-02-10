@@ -23,8 +23,8 @@ userRoutes = (app, channel) => {
     console.log('abba is a girl')
 
     const { data } = await service.SignIn({ email, password });
-
-    res.json(data);
+    
+    return res.json(data);
   });
 
   app.post("/profile", auth, async (req, res, next) => {
